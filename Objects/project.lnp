@@ -1,0 +1,16 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\startup_stm32f446xx.o"
+".\objects\buzzer.o"
+".\objects\fnd.o"
+".\objects\led.o"
+".\objects\main.o"
+".\objects\push_button.o"
+".\objects\sysclock.o"
+".\objects\systick.o"
+".\objects\uart.o"
+".\objects\util.o"
+".\objects\xprintf.o"
+--strict --scatter ".\Objects\project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\project.map" -o .\Objects\project.axf
